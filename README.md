@@ -1,0 +1,1 @@
+Andrzej Putyra, Magdalena Adamczyk
