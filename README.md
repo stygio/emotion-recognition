@@ -49,12 +49,47 @@ Andrzej Putyra, Magdalena Adamczyk
 
 ### MAHNOB-HCI
 
+* 6 cameras, microphone, gaze tracker + EEG, ECG, GSR, skin temperature sensors, respiration belt
+* 30 participants, age 19-40, 17 female, 13 male
+* Recorded data:
+	* Audio: 1. Contains audio signal from room microphone (room noise, sound of video stimuli); 2. Head-worn mic. 
+	* Camera: 1 colour cam, and 5 monochrome. 
+	* Physiological: signals recorded when video is shown, stored using BDF format
+	* Eye Gaze: stored in .tsv file, annotation to each data track (exc. audio). 
+	* Metadata: contains information about experiment: eg if participant is wearing glasses, has beard, audio sample rate/sec. 
+	* Synchronization: Uncertain timing of stimulidata is introduced by video player.
+* Experiments: 
+	* expType1: responses to emotional video, duration 40 min. (15 sec. neutral break before emotional klip). Participant is self reporting using 9 numerical keys.
+	* expType2,3: reaction on unrelated tag under photograph
+	* expType 4: reaction on unrelated tag under video
+	
 ### EATMINT
+
+* 60 participants, mean age 23,5 
+* Skin temperature sensor, skin conductance, tracking the eyes, blood presure, ECG
+* Self reporting, questionnaires
+* Remote collaboration without seeing each other - slogan against violence at school
 
 ### RECOLA
 
+* Human reactions during social interactions (daily-life situations), relations between facial, vocal, gestural expresions
+* Sensors: Microphone, 2 cameras, ECG, EEG
+* 46 Participant (27 females, 19 males) age: 22 (standard deviation 3). 33 original French speaking, 8 Italian, 4 German, 1 Portugese.
+* They were self reporting they mood 3 times
+* Mood manipulation: 2 groups (positive and negative, based on self-report). Films: neutral, positive, negative
+* Survival task - spontanius interactions, EmotiBoard - remote communication 
+* Intercorelation analysis to synchronization, synchronization pulses
+* The analysis of the annotations shows a good inter-annotator agreement rate for the affective dimensions, and a fairly good one for the social dimensions, with a balanced distribution of instances when mean centering is applied
+* The balance of instances can change significantly.
+
 ### BIRAFFE
 
+* 206 participants (31% females) age: 19-33. Experiment lasts 90 min. 
+* ECG, GSR, photo every 333 ms (stimulus) or 1 s (games)
+* Stimuli groups: positive, neutral,  negative. Paired (picture and sound: ++,--, 00, -+,+-), presentation lasts 6s, focus of 1st improssion
+* Games (bring down asteroids, fight enemies)
+* 2 widgets for rating: valence-arousal face, 5 face wifget
+* model should be personalized, self adapting to a specific person 
 
 
 ### General Notes
