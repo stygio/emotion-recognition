@@ -1,6 +1,23 @@
 Andrzej Putyra, Magdalena Adamczyk
 
-# Review of emotional recognition dataset publications:
+# Review of emotional recognition datasets publications:
+
+## Datasets used in the project
+
+### Deep Affect Prediction in-the-wild: Aff-Wild Database and Challenge, Deep Architectures, and Beyond
+
+* This publication is dedicated to the Aff-Wild Challenge. It provides both a dataset and an implementation of appropriate methodology.
+* The methodology used in the paper is based on emotion recognition from facial video. The techniques used are CNNs, some of which have RNNs stacked on top. Source code & pretrained models are available online.
+* Data is collected from the wild (Affect in the Wild - AffWild), i.e. reaction videos from youtube
+* Labels were collected for each frame in the video via a continuous slider operated by multiple annotators, and then statistically pruned and combined. The labels were found to correlate highly between annotators, which is a good sign.
+* Included in the dataset:
+  * Videos split into training & test sets (252, 46 files of varying length/quality)
+  * Annotations for each from of each video
+    * valence/arousal .txt files for each frame of each video
+    * **only provided for the training set**
+ * Bounding boxes for each video in the form of lists stored as json files
+
+## Other reviewed dataset publications
 
 ### AMIGOS: A Dataset for Affect, Personality and Mood Research on Individuals and Groups (2018)
 
@@ -92,6 +109,6 @@ Andrzej Putyra, Magdalena Adamczyk
 * model should be personalized, self adapting to a specific person 
 
 
-### General Notes
+## General Notes
 
 * There is a well-documented difficulty to obtain samples eliciting High Valence, Low Arousal responses
