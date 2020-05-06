@@ -2,6 +2,8 @@ Andrzej Putyra, Magdalena Adamczyk
 
 # Review of emotional recognition datasets publications:
 
+A summarization of a multitude of dataset publications in the emotion recognition domain considered for use in this project.
+
 ## Datasets used in the project
 
 ### Deep Affect Prediction in-the-wild: Aff-Wild Database and Challenge, Deep Architectures, and Beyond
