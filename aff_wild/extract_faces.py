@@ -7,6 +7,10 @@ video_folder_path = "D:/aff_wild/videos/train"
 bbox_folder_path  = "D:/aff_wild/bboxes/train"
 images_folder_path = "D:/aff_wild/images"
 
+# Number of videos to be extracted
+num_videos_to_extract = 100
+# Grab one of every <frame_modulo> frames
+frame_modulo = 20
 
 """
 Retrieves the frame at current cursor position in the video
@@ -72,17 +76,21 @@ def extract_faces_from_video(video_name):
 	video_bbox_folder = os.path.join(bbox_folder_path, os.path.splitext(video_name)[0])
 	# Main face extraction loop
 	for frame_nr in tqdm(range(int(video_length)), desc = 'Extracting from ' + video_name):
-		# Check that a boundingbox exists for this frame
-		frame = getFrame(video_handle)
-		bbox_filename = os.path.join(video_bbox_folder, str(frame_nr)) + ".pts"
-		if os.path.isfile(bbox_filename):
-			# Get the frame
-			face = crop_image(frame, get_bbox(bbox_filename, frame_nr))
-			image_filename = os.path.join(faces_folder, "{0}.jpg".format(frame_nr))
-			cv2.imwrite(image_filename, face)
+		# Only grab one of every frame_modulo frames, due to restrictions with number of files in GoogleDrive
+		if frame_nr % frame_modulo == 0:
+			frame = getFrame(video_handle)
+			# Check that a boundingbox exists for this frame
+			bbox_filename = os.path.join(video_bbox_folder, str(frame_nr)) + ".pts"
+			if os.path.isfile(bbox_filename):
+				# Get the frame
+				face = crop_image(frame, get_bbox(bbox_filename, frame_nr))
+				image_filename = os.path.join(faces_folder, "{0}.jpg".format(frame_nr))
+				cv2.imwrite(image_filename, face)
+		else:
+			video_handle.grab()
 
 
 videos = os.listdir(video_folder_path)
-for video in videos[1:5]:
+for video in videos[:num_videos_to_extract]:
 	extract_faces_from_video(video)
 

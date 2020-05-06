@@ -2,7 +2,7 @@ import os
 import pandas as pd
 from tqdm import tqdm
 
-drive_path = 'content/drive/My Drive/aff_wild/'
+drive_path = 'drive/My Drive/aff_wild/'
 drive_images_path = os.path.join(drive_path, 'images')
 
 dataset_path = 'D:/aff_wild'
@@ -52,5 +52,5 @@ dictionary = { 'Loc' : filenames,
                'Arousal' : arousal}
 
 df = pd.DataFrame(dictionary)
-df.to_csv('input.csv', index = False, header = False)
+df.to_csv(os.path.join(dataset_path, 'input.csv'), index = False, header = False)
 
